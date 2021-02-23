@@ -24,7 +24,7 @@ from apache_beam.options.pipeline_options import StandardOptions, GoogleCloudOpt
 # =============================================================================
 class ExtrairLinhas ( beam.DoFn ):
     def process(self, element):
-        #Funcao para transformar uma lista aninhada em uma lista flat
+        #Funcao para transformar uma lista aninhada em uma lista flat ( usa recursao, cool:) )
         def flatten(d, parent_key='', sep='_'):
             items = []
             for k, v in d.items ():
@@ -38,13 +38,13 @@ class ExtrairLinhas ( beam.DoFn ):
         # cria um dicionario
         data = {}
 
-        # Convert each row into a dictionary
-        # and add it to data
+        # Define tube_assembly_id como key
+        # e adiciona as linhas no dicionario
         for rows in element:
             key = rows [ 'tube_assembly_id' ]
             data [ key ] = rows
 
-        # printing final dictionary
+        # dicionario formato flat
         flat_data = flatten ( data )
 
         # Removendo as linhas com NA e os TA-
@@ -55,9 +55,11 @@ class ExtrairLinhas ( beam.DoFn ):
         # tmp_field_tube_assembly_id = ''
         # tmp_field_component_id = ''
         # tmp_field_quantity = 0
-
         temp = list ( flat_data )
-
+        
+        #Revisando essa iteracao, ainda estou testando
+        #Preciso entender como fazer para incluir os items formatados em uma nova 
+        # estrutura (dict, list, etc) pra exportar
         for key, value in flat_data.items ():
             """ os dados sao extraidos usando 2 linhas por iteracao """
             if key.find ( 'component_id' ) != -1:
