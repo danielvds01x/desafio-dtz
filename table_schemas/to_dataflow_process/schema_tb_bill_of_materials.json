@@ -1,0 +1,24 @@
+{
+  "fields": [
+    {
+      "name": "tube_assembly_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "component_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "quantity",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "process_date",
+      "type": "DATETIME",
+      "mode": "REQUIRED"
+    }
+  ]
+}

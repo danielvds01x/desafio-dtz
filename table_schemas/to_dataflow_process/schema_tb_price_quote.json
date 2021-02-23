@@ -1,0 +1,49 @@
+{
+  "fields": [
+    {
+      "name": "tube_assembly_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "supplier",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "quote_date",
+      "type": "DATE",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "annual_usage",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "min_order_quantity",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "bracket_pricing",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "quantity",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "cost",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "process_date",
+      "type": "DATETIME",
+      "mode": "REQUIRED"
+    }
+  ]
+}
