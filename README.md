@@ -3,7 +3,7 @@
 
 Este é um projeto no qual estamos utilizando a SDK do Apache Beam (Python) no serviço do Google Cloud Dataflow para realizar a ingestão dos arquivos no BigQuery.
 
-Para executar o código use o seguinte comando (exemplo para o arquivo comp_boss.csv):
+Para executar o código use o seguinte comando (exemplo para o pipeline que processa o arquivo comp_boss.csv):
 
 ```sh
 python3 -m \
