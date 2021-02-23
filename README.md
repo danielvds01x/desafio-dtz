@@ -1,7 +1,7 @@
 # desafio-dtz
 ##### __Teste com Cloud Dataflow, usando Apache Beam SDK com Python__
 
-Este é um projeto no qual estamos utilizando a SDK do Apache Beam no serviço do Google Cloud Dataflow para realizar a ingestão dos arquivos no BigQuery.
+Este é um projeto no qual estamos utilizando a SDK do Apache Beam (Python) no serviço do Google Cloud Dataflow para realizar a ingestão dos arquivos no BigQuery.
 
 Para executar o código use o seguinte comando (exemplo para o arquivo comp_boss.csv):
 
