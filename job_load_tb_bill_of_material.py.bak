@@ -74,8 +74,9 @@ class ExtrairLinhas ( beam.DoFn ):
         # timestamp_from_bigquery.strftime('%Y-%m-%dT%H:%M:%S.%fZ')
 
 # =============================================================================
-# Construcao e Execucao do pipeline
+# Build and run the pipeline
 # =============================================================================
+
 def run(argv=None):
     pipeline_options = PipelineOptions( flags=argv,
         runner='DataflowRunner',

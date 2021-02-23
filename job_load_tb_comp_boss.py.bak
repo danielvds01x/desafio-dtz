@@ -107,11 +107,11 @@ def run(argv=None):
             | 'Leitura Arquivo CSV' >> beam.io.ReadFromText (
                 'gs://csv-repo-5gj7rn4mk4bosrcpg5ew4lqlj0ulf1dy/comp_boss.csv' )
             # | 'Extrair Linhas' >> beam.ParDo ( ExtrairLinhas () )
-            | 'Parse Arquivo CSV' >> beam.ParDo(parse_file)
-            | 'Debug 1' >> beam.ParDo(print)
+            | 'Parse Arquivo CSV' >> beam.Map(parse_file)
+            | 'Debug 1' >> beam.Map(print)
             # | 'Casting dos Campos' >> beam.Map(casting)
             # | 'Campo process_date' >> beam.Map(dataprocesso)
-            # | 'Debug 2' >> beam.ParDo(print)
+            | 'Debug 2' >> beam.Map(print)
             | 'Teste de Escrita para Arquivo' >> beam.io.WriteToText (
                 'gs://csv-repo-5gj7rn4mk4bosrcpg5ew4lqlj0ulf1dy/teste.txt' )
             )
